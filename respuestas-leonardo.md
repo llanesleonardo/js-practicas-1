@@ -77,8 +77,16 @@ let dineroReal = dineroAhorrado-deudas;
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es una función?
+
+  - La forma de encapsular un bloque de código que su ejecución sea reusable en un sistema
+
 - ¿Cuándo me sirve usar una función en mi código?
+
+  - Cuando necesito reusar un código más de una sola vez
+  - Tambien nos sirve para mejorar la legibilidad de nuestro código
+
 - ¿Cuál es la diferencia entre parámetros y argumentos de una función?
+  - Los parametros son la declaración al momento de crear una función, el argumento es el valor real que se envia al momento de llamar la función.
 
 ### 2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
 
@@ -89,6 +97,21 @@ const completeName = name + lastname;
 const nickname = "juandc";
 
 console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+```
+
+```
+const name = "Juan David";
+const lastname = "Castro Gallego";
+const nickname = "juandc";
+
+function saludo(name,lastname,nickname){
+const completeName = nombreCompleto(name,lastname);
+ console.log(`Mi nombre es ${completeName} pero prefiero que me digas ${nickname}`);
+}
+
+function nombreCompleto (nombre, apellido) {
+   return `${nombre} ${apellido}`;
+}
 ```
 
 ## Condicionales
