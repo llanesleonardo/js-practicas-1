@@ -16,7 +16,7 @@
 
   - Falta incluir algunos ejemplos de código
 
-  -Falta incluir algunos ejemplos de código
+  - Falta incluir algunos ejemplos de código
 
 Recursos:
 
