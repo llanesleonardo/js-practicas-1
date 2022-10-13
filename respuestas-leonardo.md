@@ -119,8 +119,20 @@ function nombreCompleto (nombre, apellido) {
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es un condicional?
+
+  - La forma en que ejecutamos un bloque de código u otro dependiendo de alguna condición o validación.
+
 - ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+
+  - IF ,IF ELSE ,ELSE IF
+    - Estos primeros tres casos puedes validar o condicionar diferente lógica no solamente debe ser en base a una variable
+  - SWITCH
+    - En este caso la validación esta en base a una variable y se usan casos para validación
+  - ? : ternario
+    - Es un sinonimo de IF y funciona al momento de inicializar expresiones normalmente.
+
 - ¿Puedo combinar funciones y condicionales?
+  - Sí. Las funciones pueden encapsular cualquier bloque de código, incluyendo condicionales.
 
 ### 2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
 
@@ -141,6 +153,22 @@ switch (tipoDeSuscripcion) {
        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
        break;
 }
+```
+
+```
+const tipoDeSuscripcion = "Basic";
+if(tipoDeSuscripcion === "Free"){
+    console.log("Solo puedes tomar los cursos gratis");
+}else if(tipoDeSuscripcion === "Basic"){
+  console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+}else if(tipoDeSuscripcion === "Expert"){
+      console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+}else if(tipoDeSuscripcion === "" ExpertPlus){
+       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+}else{
+console.log("Ninguna de las opciones");
+}
+
 ```
 
 ### 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
