@@ -49,7 +49,7 @@ image.setAttribute(
 );
 console.log(image);
 
-divi.append(image);
+//divi.append(image);
 
 function btnOnClick() {
   //Se crearon variables para obtener el resultado de los inputs
@@ -75,4 +75,31 @@ function btnOnClick() {
     "El valor de tus inputs tiene un caracter que no es un numero";
   console.warn(mensajeError);
   resultadoEnParrafo.innerText = mensajeError;
+}
+
+// agregando EventListeners para el boton, estos metodos ejecutan la suma como lo haciamos anteriormente en el html
+//  <button id="btncalcular" onclick="btnOnClick()">Calcular</button>
+const btn = document.querySelector("#btncalcular");
+// En estos casos en particular no hay que incluir los parentesis a las funciones que realizan la suma ya uqe queremos estar ejecutandolas continuamente. El addEventListener incluye un parentesis implicito a la función.
+btn.addEventListener("click", btnOnClick);
+
+const form = document.querySelector("#formulario");
+
+form.addEventListener("submit", hacerAlgoConFormData);
+
+function hacerAlgoConFormData(e) {
+  e.preventDefault();
+  const mensajeError =
+    "El valor de tu input tiene un caracter que no es un numero";
+  let parametro1 = Number(document.querySelector("#formCalculo1").value);
+  let parametro2 = Number(document.querySelector("#formCalculo2").value);
+
+  let valorNum = Number.isInteger(parametro1)
+    ? parametro1
+    : mensajeError + " input1 \n";
+  let valorNum2 = Number.isInteger(parametro2)
+    ? parametro2
+    : mensajeError + " input2 \n";
+
+  console.log(valorNum + valorNum2);
 }
