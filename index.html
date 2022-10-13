@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulación del DOM - Curso practico JS</title>
+  </head>
+  <body>
+    <h1 pantalla="LG">Manipulación del DOM</h1>
+    <h2>Primera prueba</h2>
+    <p>Esto es un parrafo</p>
+    <p class="parrafito">Esto es un parrafo con clase</p>
+    <p id="pid">Esto es un parrafo con ID</p>
+
+    <input
+      type="text"
+      placeholder="Escribe algo aqui"
+      value="Leonardo Llanes"
+    />
+    <div id="contenedorImagen"></div>
+    <hr />
+    <h2>Segunda prueba</h2>
+
+    <h1>Manipulación del DOM 2</h1>
+
+    <input id="calculo1" onchange placeholder="Escribe algo aqui" />
+    <p>+</p>
+    <input id="calculo2" onchange placeholder="Escribe algo aqui" />
+
+    <button id="btncalcular">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <form id="formulario" action="">
+      <input
+        id="formCalculo1"
+        name="valorUno"
+        onchange
+        placeholder="Escribe algo aqui"
+      />
+      <p>+</p>
+      <input
+        id="formCalculo2"
+        name="valorDos"
+        onchange
+        placeholder="Escribe algo aqui"
+      />
+
+      <input type="submit" value="Calcular" id="formBtncalcular" />
+    </form>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
