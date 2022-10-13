@@ -13,6 +13,8 @@
   -- Eventos en JS
   -- AddEventListener
 
+  -Falta incluir algunos ejemplos de código
+
 Recursos:
 
 - https://platzi.com/blog/la-diferencia-entre-let-y-var/
