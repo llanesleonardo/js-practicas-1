@@ -51,15 +51,15 @@ Recuerda que **el éxito no se mide por cuánto tiempo te toma aprender**, esa m
 
 ### 3️⃣ Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
 
-```
-let nombre =  'Leonardo'
-let apellido = 'Llanes'
-let userName = 'llanesleonardo'
-let edad = 34
-let correoElectronico = 'llanesleonardo@gmail.com'
-let isMayorEdad = true
-let dineroAhorrado = 1000
-let deudas = 500
+```js
+let nombre = "Leonardo";
+let apellido = "Llanes";
+let userName = "llanesleonardo";
+let edad = 34;
+let correoElectronico = "llanesleonardo@gmail.com";
+let isMayorEdad = true;
+let dineroAhorrado = 1000;
+let deudas = 500;
 ```
 
 ### 4️⃣ Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
@@ -67,9 +67,9 @@ let deudas = 500
 - Nombre completo (nombre y apellido)
 - Dinero real (dinero ahorrado menos deudas)
 
-```
+```js
 let nombreCompleto = `${nombre} ${apellido}`;
-let dineroReal = dineroAhorrado-deudas;
+let dineroReal = dineroAhorrado - deudas;
 ```
 
 ## Funciones
@@ -90,27 +90,35 @@ let dineroReal = dineroAhorrado-deudas;
 
 ### 2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
 
-```
+```js
 const name = "Juan David";
 const lastname = "Castro Gallego";
 const completeName = name + lastname;
 const nickname = "juandc";
 
-console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+console.log(
+  "Mi nombre es " +
+    completeName +
+    ", pero prefiero que me digas " +
+    nickname +
+    "."
+);
 ```
 
-```
+```js
 const name = "Juan David";
 const lastname = "Castro Gallego";
 const nickname = "juandc";
 
-function saludo(name,lastname,nickname){
-const completeName = nombreCompleto(name,lastname);
- console.log(`Mi nombre es ${completeName} pero prefiero que me digas ${nickname}`);
+function saludo(name, lastname, nickname) {
+  const completeName = nombreCompleto(name, lastname);
+  console.log(
+    `Mi nombre es ${completeName} pero prefiero que me digas ${nickname}`
+  );
 }
 
-function nombreCompleto (nombre, apellido) {
-   return `${nombre} ${apellido}`;
+function nombreCompleto(nombre, apellido) {
+  return `${nombre} ${apellido}`;
 }
 ```
 
@@ -136,26 +144,28 @@ function nombreCompleto (nombre, apellido) {
 
 ### 2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
 
-```
+```js
 const tipoDeSuscripcion = "Basic";
 
 switch (tipoDeSuscripcion) {
-   case "Free":
-       console.log("Solo puedes tomar los cursos gratis");
-       break;
-   case "Basic":
-       console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
-       break;
-   case "Expert":
-       console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
-       break;
-   case "ExpertPlus":
-       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
-       break;
+  case "Free":
+    console.log("Solo puedes tomar los cursos gratis");
+    break;
+  case "Basic":
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    break;
+  case "Expert":
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    break;
+  case "ExpertPlus":
+    console.log(
+      "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+    );
+    break;
 }
 ```
 
-```
+```js
 const tipoDeSuscripcion = "Basic";
 if(tipoDeSuscripcion === "Free"){
     console.log("Solo puedes tomar los cursos gratis");
@@ -200,29 +210,28 @@ console.log("Ninguna de las opciones");
 
 ### 2️⃣ Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
 
-```
+```js
 for (let i = 0; i < 5; i++) {
-    console.log("El valor de i es: " + i);
+  console.log("El valor de i es: " + i);
 }
 
 for (let i = 10; i >= 2; i--) {
-    console.log("El valor de i es: " + i);
+  console.log("El valor de i es: " + i);
 }
 ```
 
-```
+```js
 let i = 0;
-while( i < 5 ){
+while (i < 5) {
   console.log("El valor de i es: " + i);
-i++;
+  i++;
 }
 
 i = 10;
-while( i >= 2 ){
+while (i >= 2) {
   console.log("El valor de i es: " + i);
-i--;
+  i--;
 }
-
 ```
 
 ### 3️⃣ Escribe un código en JavaScript que le pregunte a los usuarios cuánto es `2 + 2`. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
@@ -245,15 +254,73 @@ while (respuesta === "4") {
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es un array?
+
+  - Son objetos (Listas) que pueden incluir diferentes elementos.
+  - const array = [1,'jaja', true, false]
+
 - ¿Qué es un objeto?
+
+  - Es un objeto (Lista) que incluye diferentes caracteristicas relacionadas entre ellas. Usan clave y valor
+
+        const obj = {
+        nombre: 'Leonardo',
+        edad: 34,
+        }
+
 - ¿Cuándo es mejor usar objetos o arrays?
+
+  - Cuando los elementos son tratados de igual manera se usan los array
+  - Cuando los nombres de cada elemento son importantes para cada valor se usan los objetos
+
 - ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+
+  - Si. Los objetos pueden guardar arrays y los arrays pueden guardar objetos.
 
 ### 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
 
+```js
+const arreglo = [1, 2, 3, 4];
+
+function recibeArray(arry) {
+  return console.log(arry[0]);
+}
+
+recibeArray(arreglo);
+```
+
 ### 3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
 
+```js
+const arreglo = [1, 2, 3, 4];
+
+function recibeArray(arry) {
+  let i = 0;
+  while (i < arry.length) {
+    console.log(arry[i]);
+    i++;
+  }
+}
+
+recibeArray(arreglo);
+```
+
 ### 4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
+
+```js
+const obj = {
+  nombre: "Leonardo",
+  edad: 34,
+  country: "MX",
+};
+
+function recibeObjeto(objeto) {
+  for (const element in objeto) {
+    console.log(`${element} - ${objeto[element]}`);
+  }
+}
+
+recibeObjeto(obj);
+```
 
 ## ¿Cómo te fue? 🏆
 
