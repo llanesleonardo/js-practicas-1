@@ -50,3 +50,29 @@ image.setAttribute(
 console.log(image);
 
 divi.append(image);
+
+function btnOnClick() {
+  //Se crearon variables para obtener el resultado de los inputs
+  const input1 = document.querySelector("#calculo1");
+  const input2 = document.querySelector("#calculo2");
+  const btn = document.querySelector("#btncalcular");
+  // Se hizo una conversión al tipo Numero de las variables input1 e input2 (Esto tambien se le llama Coerción explicita)
+  let valor1 = Number(input1.value);
+  let valor2 = Number(input2.value);
+  //Se creó un parrafo para tomar el valor de la suma
+  let resultadoEnParrafo = document.querySelector("#resultado");
+
+  //Se uso un condicional para comparar que los dos valores tienen que ser tipo numero
+  if (Number.isInteger(valor1) && Number.isInteger(valor2)) {
+    let resultadoSuma = valor1 + valor2;
+    //console.log();
+    // Se incluye en un parrafo el resultado grafico para el usuario
+    resultadoEnParrafo.innerText = resultadoSuma;
+    return;
+  }
+  // Si algun numero no es tipo Number se lanza un error a la consola y el parrafo de manera grafica.
+  const mensajeError =
+    "El valor de tus inputs tiene un caracter que no es un numero";
+  console.warn(mensajeError);
+  resultadoEnParrafo.innerText = mensajeError;
+}
