@@ -167,23 +167,83 @@ switch (tipoDeSuscripcion) {
 
 ```js
 const tipoDeSuscripcion = "Basic";
-if(tipoDeSuscripcion === "Free"){
-    console.log("Solo puedes tomar los cursos gratis");
-}else if(tipoDeSuscripcion === "Basic"){
+if (tipoDeSuscripcion === "Free") {
+  console.log("Solo puedes tomar los cursos gratis");
+} else if (tipoDeSuscripcion === "Basic") {
   console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
-}else if(tipoDeSuscripcion === "Expert"){
-      console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
-}else if(tipoDeSuscripcion === "" ExpertPlus){
-       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
-}else{
-console.log("Ninguna de las opciones");
+} else if (tipoDeSuscripcion === "Expert") {
+  console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+} else if (tipoDeSuscripcion === "ExpertPlus") {
+  console.log(
+    "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+  );
+} else {
+  console.log("Ninguna de las opciones");
 }
-
 ```
 
 ### 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 
+```js
+const tipoDeSuscripcion = "Free";
+function conseguirTipoSuscripcion(tipoDeSuscripcion) {
+  if (tipoDeSuscripcion === "Free") {
+    console.log("Solo puedes tomar los cursos gratis");
+    return;
+  }
+  if (tipoDeSuscripcion === "Basic") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    return;
+  }
+  if (tipoDeSuscripcion === "Expert") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    return;
+  }
+  if (tipoDeSuscripcion === "ExpertPlus") {
+    console.log(
+      "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+    );
+    return;
+  }
+  console.warn("Este tipo de suscripción no existe");
+
+  return "No existe";
+}
+
+conseguirTipoSuscripcion(tipoDeSuscripcion);
+```
+
 > 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
+
+```js
+const tipoDeSuscripcion = "Free";
+let arrayPosibleValues = ["Free", "Basic", "Expert", "ExpertPlus"];
+let arrayPosibleValuesResponses = [
+  "Solo puedes tomar los cursos gratis",
+  "Puedes tomar casi todos los cursos de Platzi durante un mes",
+  "Puedes tomar casi todos los cursos de Platzi durante un año",
+  "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año",
+];
+function conseguirTipoSuscripcion(
+  tipoDeSuscripcion,
+  arrayPosibleValues,
+  arrayPosibleValuesResponses
+) {
+  for (let i = 0; i < arrayPosibleValues.length; i++) {
+    if (tipoDeSuscripcion == arrayPosibleValues[i]) {
+      console.log(arrayPosibleValuesResponses[i]);
+      return;
+    }
+    return "No existe ese valor";
+  }
+}
+
+conseguirTipoSuscripcion(
+  tipoDeSuscripcion,
+  arrayPosibleValues,
+  arrayPosibleValuesResponses
+);
+```
 
 ## Ciclos
 
